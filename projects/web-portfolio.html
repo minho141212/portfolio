@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <title>웹 포트폴리오</title>
+        <link rel="icon" type="image/png" href="../assets/images/icon/favicon-96x96.png">
+        <link rel="apple-touch-icon" href="../assets/images/icon/apple-touch-icon.png">
+        <script>
+            (function () {
+                try {
+                    var saved = localStorage.getItem('theme');
+                    var theme = saved;
+                    if (!theme) {
+                        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                        theme = prefersDark ? 'dark' : 'light';
+                    }
+                    document.documentElement.setAttribute('data-theme', theme);
+                } catch (e) {}
+            })();
+        </script>
+        <script src="../js/theme.js" defer></script>
+        <link rel="stylesheet" href="../assets/css/style.css" /> 
+    </head>
+    <body>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">Dark</button>
+        <div class="container">
+            <a class="btn" href="../index.html">← 돌아가기</a>
+            <h1>웹 포트폴리오</h1>
+            <img class="detail-hero" src="../assets/images/WebPortfolio/WebPortfolio00.webp" alt="Web Portfolio 00">
+            <p class="lead">HTML, CSS, JavaScript를 사용한 간단한 포트폴리오</p>
+
+            <h2>개요</h2>
+            <p>작업한 포트폴리오를 올려놓을 웹 사이트가 필요해 만든 사이트입니다.</p>
+            <p>지금 보고있는 웹사이트입니다.</p>
+
+            <h2>기술 스택</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <h2>문제와 해결</h2>
+            <p>예전에 조금 공부했던 웹 개발 지식들을 활용해서 사이트를 만들었습니다.</p>
+
+            <h2>결과/링크</h2>
+            <ul>
+                <li>레포/빌드: <a href="https://github.com/minho141212/portfolio">GitHub</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -20,6 +20,7 @@
             })();
         </script>
         <script src="js/theme.js" defer></script>
+        <script src="js/filter.js" defer></script>
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
@@ -46,7 +47,8 @@
             <!-- Projects -->
             <section class="section">
                 <h2>프로젝트</h2>
-                <div class="grid">
+                <div id="project-filterbar" class="filterbar" role="toolbar" aria-label="Project filters"></div>
+                <div class="grid" id="project-grid">
                     <a class="card" href="projects/ar-photo-zone.html">
                         <img class="thumb" src="assets/images/ar.jpg" alt="ar">
                         <div class="body">

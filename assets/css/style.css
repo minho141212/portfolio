@@ -131,6 +131,10 @@ a {
     color: var(--muted);
 }
 
+.card.is-hidden {
+    display: none;
+}
+
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -178,4 +182,29 @@ a {
     color: var(--fg);
     background: var(--card-bg);
     cursor: pointer;
+}
+
+/* filter */
+
+.filterbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 16px;
+}
+
+.filter-btn {
+    padding: .4rem .8rem;
+    border: 1px solid var(--btn-border);
+    border-radius: 999px;
+    background: var(--card-bg);
+    color: var(--fg);
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.filter-btn[aria-pressed="true"] {
+    outline: none;
+    border-color: var(--border);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .05);
 }

@@ -1,18 +1,32 @@
-:root {
-    --get: 16px;
+:root[data-theme='light'] {
     --border: #e5e7eb;
     --muted: #6b7280;
     --bg: #f8f9fa;
+    --fg: #111111;
+    --card-bg: #f3f4f6;
+    --tag-bg: #f3f4f6;
+    --btn-border: #d1d5db;
 }
 
-* {
-    box-sizing: border-box;
+:root[data-theme='dark'] {
+    --border: #2e2e2e;
+    --muted: #9ca3af;
+    --bg: #111111;
+    --fg: #e5e7eb;
+    --card-bg: #1e1e1e;
+    --tag-bg: #2c2c2c;
+    --btn-border: #3a3a3a;
+}
+
+:root {
+    color-scheme: light dark;
 }
 
 body {
     margin: 0;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
-    color: #111;
+    color: var(--fg);
+    background: var(--bg);
 }
 
 a {
@@ -25,8 +39,6 @@ a {
     margin: 0 auto;
     padding: 24px;
 }
-
-/* hero */
 
 .hero {
     position: relative;
@@ -51,17 +63,17 @@ a {
     color: #fff;
     text-align: center;
     padding: 1rem;
-    background: linear-gradient(transparent, rgba(0, 0, 0, .35));
+    background: linera-gradient(transparent, rgba(0, 0, 0, .35));
 }
 
-/* sections */
+/* section */
 
 .section {
     margin-top: 36px;
 }
 
 .section h2 {
-    font-size: 1.75rem;
+    font-size:1.75rem;
     font-weight: 800;
     margin: 0 0 8px;
 }
@@ -72,7 +84,7 @@ a {
 
 .about {
     background: var(--bg);
-    border: 1px solid #eee;
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 16px;
 }
@@ -81,7 +93,7 @@ a {
 
 .grid {
     display: grid;
-    gap: var(--gap);
+    gap: 16px;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
@@ -89,7 +101,7 @@ a {
     border: 1px solid var(--border);
     border-radius: 14px;
     overflow: hidden;
-    background: #fff;
+    background: var(--card-bg);
     transition: transform .12s, box-shadow .12s;
 }
 
@@ -130,12 +142,10 @@ a {
 
 .tags li {
     font-size: .8rem;
-    padding:.15rem .5rem;
-    background: #f3f4f6;
+    padding: .15rem .5rem;
+    background: var(--tag-bg);
     border-radius: 999px;
 }
-
-/* detail */
 
 .detail-hero {
     width: 100%;
@@ -151,7 +161,21 @@ a {
 
 .btn {
     display: inline-block;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--btn-border);
     padding: .6rem 1rem;
     border-radius: 10px;
+    color: var(--fg);
+    background: var(--card-bg);
+}
+
+.theme-toggle {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    padding: .6rem .9rem;
+    border-radius: 999px;
+    border: 1px solid var(--btn-border);
+    color: var(--fg);
+    background: var(--card-bg);
+    cursor: pointer;
 }
